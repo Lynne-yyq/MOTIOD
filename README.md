@@ -1,7 +1,5 @@
 # MOTIOD
 
-## **Automatic Recognition of Isolated Piglet Outliers Based on Multi-Object Tracking**
-
 ## Conda
 
 ``` 
