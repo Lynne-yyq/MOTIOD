@@ -1,6 +1,6 @@
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
 """
-This file provides the definition of the convolutional heads used to predict masks, as well as the losses
+This file provides the definition of the convolutional heads used to predict masks, as well as the losses.
 """
 import io
 from collections import defaultdict
