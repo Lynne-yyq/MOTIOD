@@ -237,7 +237,7 @@ def draw_and_save(results, frame, left, right, frame_count, video_name, args, sc
 
             start_x = (frame.shape[1] - width) // 2
             start_y = height + 20
-            cv2.putText(frame, outlier_text, (start_x, start_y), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 0, 0), 2)  # !!!!!!!!
+            cv2.putText(frame, outlier_text, (start_x, start_y), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 0, 0), 2)  
 
             with open(outlier_history_path, 'w') as f:
                 for frame_id, frame_data in tracker.outlier_history.items():
