@@ -197,7 +197,7 @@ class Tracker(object):
         unmatched_tracks = [t for t in range(M)]
         unmatched_dets = [d for d in range(N)]
         if N > 0 and M > 0:
-            det_box = torch.stack([torch.tensor(obj['bbox']) for obj in results], dim=0) # N x 4
+            det_box = torch.stack([torch.tensor(obj['bbox']) for obj in results], dim=0) 
             data = torch.stack([torch.tensor(obj['center']) for obj in results], dim=0)
 
             mother_pig_index = self.is_mother_pig(det_box)
@@ -207,7 +207,7 @@ class Tracker(object):
             det_box_piglets = np.delete(det_box, mother_pig_index, axis=0)
             avg_length = torch.max(det_box[:, 2] - det_box[:, 0], det_box[:, 3] - det_box[:, 1]).mean()
 
-            dist_to_mother_boundary = Tracker.compute_distance_to_mother_boundary(piglets, mother_pig_bbox) # new sow_dist!!!!
+            dist_to_mother_boundary = Tracker.compute_distance_to_mother_boundary(piglets, mother_pig_bbox)
 
             dist = cdist(piglets.cpu().numpy(), piglets.cpu().numpy())
 
