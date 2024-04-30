@@ -290,11 +290,11 @@ class Tracker(object):
                 track_old=list(results_dict.items())[i]
                 track_old=track_old[1]
                 det_box = torch.stack([torch.tensor(track_old['bbox'])], dim=0)
-                for obj in unmatched_tracks:   #
+                for obj in unmatched_tracks:   
                     m.append(tracks[obj])
                 if len(m)>0:
-                    track_box = torch.stack([torch.tensor(obj['bbox']) for obj in m], dim=0)  # M x 4
-                    cost_bbox = 1.0 - box_ops.generalized_box_iou(det_box, track_box)  # N x M
+                    track_box = torch.stack([torch.tensor(obj['bbox']) for obj in m], dim=0)   
+                    cost_bbox = 1.0 - box_ops.generalized_box_iou(det_box, track_box)  
 
                     matched_indices = linear_sum_assignment(cost_bbox)
                     matches1 = [[], []]
