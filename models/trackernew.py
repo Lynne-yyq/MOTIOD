@@ -202,7 +202,7 @@ class Tracker(object):
 
             mother_pig_index = self.is_mother_pig(det_box)
             mother_pig = data[mother_pig_index]
-            mother_pig_bbox = det_box[mother_pig_index]  # 母猪的边框
+            mother_pig_bbox = det_box[mother_pig_index]  
             piglets = np.delete(data, mother_pig_index, axis=0)
             det_box_piglets = np.delete(det_box, mother_pig_index, axis=0)
             avg_length = torch.max(det_box[:, 2] - det_box[:, 0], det_box[:, 3] - det_box[:, 1]).mean()
