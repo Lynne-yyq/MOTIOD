@@ -32,9 +32,6 @@ python demo_new.py  --with_box_refine
 ```
 
 
-## Acknowledgement
-We thank for the part of code of [TransTrack](https://github.com/PeizeSun/TransTrack). We thank the authors for releasing their code.
-
 
 
 
